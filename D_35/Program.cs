@@ -57,17 +57,21 @@ namespace D_35
         static void ListaKiir(List<int> lista)
         {
             foreach (var item in lista) Console.Write(item + " ");
+           
         }
 
-        static List<int> Listafeltolt(int v)
+        static List<int> Listafeltolt(int n)
         {
-            List<int> lista = new List<int>();
+            //List<int> lista = new List<int>();
             Random rnd = new Random();
-            for (int i = 0; i < v; i++)
+            var lista = Enumerable.Range(0, n).Select(_ => rnd.Next(1, 101)).ToList();
+            /*
+            for (int i = 0; i < n; i++)
             {
                 int vszam = rnd.Next(1,101);
                 lista.Add(vszam);
             }
+            */
             return lista;
         }
     }
